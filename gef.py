@@ -2040,16 +2040,16 @@ class PowerPC(Architecture):
     return_register = "$r0"
     flag_register = "$cr"
     flags_table = {
-        3: "negative[0]",
-        2: "positive[0]",
-        1: "equal[0]",
-        0: "overflow[0]",
+        31: "negative[0]",
+        30: "positive[0]",
+        29: "equal[0]",
+        28: "overflow[0]",
 
         # cr7
-        31: "less[7]",
-        30: "greater[7]",
-        29: "equal[7]",
-        28: "overflow[7]",
+        3: "less[7]",
+        2: "greater[7]",
+        1: "equal[7]",
+        0: "overflow[7]",
     }
     function_parameters = ["$i0", "$i1", "$i2", "$i3", "$i4", "$i5"]
     syscall_register = "$r0"
